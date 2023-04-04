@@ -47,9 +47,19 @@ function App() {
   }
 
   const calculateProgress = () => {
+    let qtd = 0;
+    let key;
     let value = 0;
-    let amountToAdd = 25;
+    //let amountToAdd = 25;
 
+    for(key in data) {
+      if(data.hasOwnProperty(key)) {
+          qtd++;
+      }
+    }
+
+    let amountToAdd = 100/qtd;
+    console.log(amountToAdd);
     if(data.fullName) {
       const names = data.fullName.split(" ");
       if(names[1]) {
