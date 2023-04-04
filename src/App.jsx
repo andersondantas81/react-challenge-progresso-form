@@ -47,6 +47,7 @@ function App() {
   }
 
   const calculateProgress = () => {
+    //let qtd = Object.keys(data).length; // Só funciona nos navegadores que tem compatibilidade as funcionalidades ES6
     let qtd = 0;
     let key;
     let value = 0;
